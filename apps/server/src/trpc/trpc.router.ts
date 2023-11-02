@@ -1,34 +1,22 @@
 import { INestApplication, Injectable } from '@nestjs/common';
 import { TrpcService } from '@server/trpc/trpc.service';
-import { z } from 'zod';
 import * as trpcExpress from '@trpc/server/adapters/express';
-import { TasksService } from '@server/tasks/tasks.service';
+import { TrpcProcedure } from '@server/trpc/trpc.procedure';
+import { TrpcTask } from '@server/trpc/trpc.task';
 
 @Injectable()
 export class TrpcRouter {
-  constructor(private readonly trpc: TrpcService, private task: TasksService) {}
+  constructor(
+    private readonly trpc: TrpcService,
+    private trpcProcedure: TrpcProcedure,
+    private trpcTask: TrpcTask,
+  ) {}
 
-  appRouter = this.trpc.router({
-    hello: this.trpc.procedure
-      .input(z.object({ name: z.string().optional() }))
-      .query(({ input }) => {
-        return `Hello ${input.name ? input.name : `Bilbo`}`;
-      }),
+  router = this.trpc.router({
+    hello: this.trpcProcedure.hello,
   });
 
-  createTask = this.trpc.procedure
-    .input(
-      z
-        .object({
-          title: z.string(),
-          description: z.string().optional(),
-          status: z.boolean().default(false).optional(),
-        })
-        .required(),
-    )
-    .mutation(async ({ input }) => {
-      return await this.task.create(input);
-    });
+  appRouter = this.trpc.mergeRouters(this.router, this.trpcTask.taskRouter);
 
   async applyMiddleware(app: INestApplication) {
     app.use(
