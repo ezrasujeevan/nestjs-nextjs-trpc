@@ -54,13 +54,13 @@ export class TrpcTask {
   });
 
   taskRouter = this.trpc.router({
-    createTask: this.create,
-    findAllTasks: this.findAlL,
-    fineCompletedTasks: this.findCompleted,
-    fineIncompleteTasks: this.findIncomplete,
-    findOneTask: this.findOne,
-    updateTask: this.update,
-    deleteTask: this.remove,
+    create: this.create,
+    findAll: this.findAlL,
+    fineCompleted: this.findCompleted,
+    fineIncomplete: this.findIncomplete,
+    findOne: this.findOne,
+    update: this.update,
+    delete: this.remove,
   });
 
   constructor(private readonly trpc: TrpcService, private task: TasksService) {}

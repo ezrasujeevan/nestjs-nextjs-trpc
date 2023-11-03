@@ -12,11 +12,10 @@ export class TrpcRouter {
     private trpcTask: TrpcTask,
   ) {}
 
-  router = this.trpc.router({
+  appRouter = this.trpc.router({
     hello: this.trpcProcedure.hello,
+    tasks: this.trpcTask.taskRouter,
   });
-
-  appRouter = this.trpc.mergeRouters(this.router, this.trpcTask.taskRouter);
 
   async applyMiddleware(app: INestApplication) {
     app.use(

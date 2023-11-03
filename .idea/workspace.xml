@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97ff4d7e-4ffa-40e8-98b2-3c7dec321029" name="Changes" comment="removed ide settings">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="97ff4d7e-4ffa-40e8-98b2-3c7dec321029" name="Changes" comment="completed backend services">
+      <change afterPath="$PROJECT_DIR$/apps/web/app/Types/task.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/app/component/taskDetail.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/app/task/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/tasks/tasks.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/tasks/tasks.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/trpc/trpc.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/trpc/trpc.router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/trpc/trpc.task.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/trpc/trpc.task.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +43,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -58,11 +71,18 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "prettier.import.notification.dismissed": "true",
-    "settings.editor.selected.configurable": "preferences.general",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Workspace\\nestjs-nextjs-trpc\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "editing.templates",
     "ts.external.directory.path": "D:\\Workspace\\nestjs-nextjs-trpc\\apps\\web\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\nestjs-nextjs-trpc\apps\server\src\trpc" />
+      <recent name="D:\Workspace\nestjs-nextjs-trpc\apps\server\src\trpc\tasks" />
+    </key>
+  </component>
   <component name="RunManager" selected="Docker.docker-compose.yml.postgres: Compose Deployment">
     <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -95,12 +115,15 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="97ff4d7e-4ffa-40e8-98b2-3c7dec321029" name="Changes" comment="" />
@@ -109,7 +132,8 @@
       <option name="presentableId" value="Default" />
       <updated>1698904084359</updated>
       <workItem from="1698904086017" duration="2029000" />
-      <workItem from="1698906129458" duration="367000" />
+      <workItem from="1698906129458" duration="11877000" />
+      <workItem from="1698980997138" duration="12191000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -127,7 +151,55 @@
       <option name="project" value="LOCAL" />
       <updated>1698906417313</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed ide settings">
+      <option name="closed" value="true" />
+      <created>1698906501546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698906501546</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added swagger documentation">
+      <option name="closed" value="true" />
+      <created>1698906619121</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698906619121</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added task crud operations">
+      <option name="closed" value="true" />
+      <created>1698906808046</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698906808046</updated>
+    </task>
+    <task id="LOCAL-00006" summary="config tprc with task service">
+      <option name="closed" value="true" />
+      <created>1698911684602</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698911684603</updated>
+    </task>
+    <task id="LOCAL-00007" summary="completed backend services">
+      <option name="closed" value="true" />
+      <created>1698915643232</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698915643232</updated>
+    </task>
+    <task id="LOCAL-00008" summary="completed backend services">
+      <option name="closed" value="true" />
+      <created>1698915717196</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698915717196</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +231,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="removed ide settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed ide settings" />
+    <MESSAGE value="added swagger documentation" />
+    <MESSAGE value="added task crud operations" />
+    <MESSAGE value="config tprc with task service" />
+    <MESSAGE value="completed backend services" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed backend services" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/apps/server/src/tasks/tasks.controller.ts</url>
+          <line>60</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
